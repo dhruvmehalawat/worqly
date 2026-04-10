@@ -347,6 +347,23 @@ body.dark .timeline::before {
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 15px;
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+.add-service-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 15px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 10;
+  position: relative;
+  touch-action: manipulation; /* Improves touch responsiveness */
 }
 
 .service-item {
@@ -546,5 +563,14 @@ form input, form textarea {
 
   .section-subtitle {
     padding: 0 15px;
+  }
+
+  .add-service-btn {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .service-item {
+    padding: 15px;
   }
 }

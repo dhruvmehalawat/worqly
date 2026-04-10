@@ -61,6 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contactForm');
   const responseMsg = document.getElementById('formResponse');
 
+  if (!servicesContainer || !addServiceBtn) return;
+
   let serviceCount = 0;
 
   // Function to create a new service configuration block
@@ -73,8 +75,8 @@ document.addEventListener('DOMContentLoaded', () => {
     serviceItem.innerHTML = `
       <div class="service-header">
         <h4>Service ${serviceCount}</h4>
-        <button type="button" class="remove-service" title="Remove Service">
-          <i class="fas fa-times"></i>
+        <button type="button" class="remove-service" aria-label="Remove Service">
+         &times;
         </button>
       </div>
 
@@ -108,21 +110,25 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateServiceNumbers() {
     const items = servicesContainer.querySelectorAll('.service-item');
     items.forEach((item, index) => {
-      const header = item.querySelector('h4');
-      header.textContent = `Service ${index + 1}`;
+      item.querySelector('h4').textContent = `Service ${index + 1}`;
     });
     serviceCount = items.length;
   }
 
   // Add first service by default
-  if (servicesContainer) {
+  
+  createServiceItem();
+
+   // Handle both click and touch events for mobile
+
+  const handleAddService = (e) => {
+    e.preventDefault();
     createServiceItem();
-  }
+  };
 
   // Add new service on button click
-  if (addServiceBtn) {
-    addServiceBtn.addEventListener('click', createServiceItem);
-  }
+ addServiceBtn.addEventListener('click', handleAddService);
+  addServiceBtn.addEventListener('touchstart', handleAddService, { passive: false });
 
   // Handle form submission
   if (form) {
