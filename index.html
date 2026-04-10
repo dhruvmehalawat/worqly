@@ -303,19 +303,38 @@
   <!-- ======================= -->
   <!-- CONTACT SECTION -->
   <!-- ======================= -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2 class="section-title" data-aos="fade-up">Request a Demo</h2>
-      <form id="contactForm" data-aos="fade-up">
+ <section id="contact" class="section">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">Request a Demo</h2>
+    <p class="section-subtitle" data-aos="fade-up">
+      Tell us about your requirements and configure the services you need.
+    </p>
+
+    <form id="contactForm" class="contact-form" data-aos="fade-up">
+      <div class="form-grid">
         <input type="text" name="name" placeholder="Full Name" required />
         <input type="email" name="email" placeholder="Email Address" required />
         <input type="text" name="company" placeholder="Company Name" required />
-        <textarea name="message" rows="5" placeholder="Your Message"></textarea>
-        <button type="submit" class="btn-primary">Submit</button>
-        <p id="formResponse" class="form-response"></p>
-      </form>
-    </div>
-  </section>
+        <input type="number" name="employees" placeholder="Number of Employees" min="1" required />
+      </div>
+
+      <textarea name="message" rows="4" placeholder="Additional Requirements"></textarea>
+
+      <!-- Service Configurator -->
+      <div class="service-configurator">
+        <h3>Configure Your Services</h3>
+        <div id="servicesContainer"></div>
+
+        <button type="button" id="addServiceBtn" class="btn-secondary">
+          <i class="fas fa-plus"></i> Add Service
+        </button>
+      </div>
+
+      <button type="submit" class="btn-primary">Submit Request</button>
+      <p id="formResponse" class="form-response"></p>
+    </form>
+  </div>
+</section>
 
   <!-- ======================= -->
   <!-- FOOTER -->

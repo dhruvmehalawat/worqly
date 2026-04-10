@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname)));
 
 app.post('/api/contact', (req, res) => {
-  const { name, email, company, message } = req.body;
+  const { name, email, company, message, services } = req.body;
 
   if (!name || !email || !company) {
     return res.status(400).json({ message: 'Please fill all required fields.' });
@@ -23,6 +23,7 @@ app.post('/api/contact', (req, res) => {
     email,
     company,
     message,
+    services: services || [],
     date: new Date()
   };
 
