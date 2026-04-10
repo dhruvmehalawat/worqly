@@ -188,6 +188,15 @@ body.dark .hero {
   box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
+.stat-image img{
+  float: right;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
 /* Grids */
 .features-grid, .pricing-grid, .stats-grid, .footer-grid {
   display: grid;
