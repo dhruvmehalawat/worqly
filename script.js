@@ -54,6 +54,81 @@ document.addEventListener('DOMContentLoaded', () => {
       testimonials[index].classList.add('active');
     }, 4000);
   }
+  //popup window
+   const modal = document.getElementById("planModal");
+  const closeModalBtn = document.getElementById("closeModal");
+  const selectedPlanText = document.getElementById("selectedPlan");
+  const planInput = document.getElementById("planInput");
+  const planForm = document.getElementById("planForm");
+  const responseMsgp = document.getElementById("planFormResponse");
+
+  // Open modal when clicking "Choose Plan"
+  document.querySelectorAll(".choose-plan-btn").forEach((button) => {
+    button.addEventListener("click", () => {
+      const plan = button.getAttribute("data-plan");
+      selectedPlanText.textContent = plan;
+      planInput.value = plan;
+      modal.classList.add("show");
+    });
+  });
+
+  // Close modal
+  function closeModal() {
+    modal.classList.remove("show");
+    planForm.reset();
+    responseMsgp.textContent = "";
+  }
+
+  closeModalBtn.addEventListener("click", closeModal);
+
+  // Close when clicking outside the modal
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  // Close with ESC key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeModal();
+    }
+  });
+
+  // Submit form to Formspree
+  planForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    responseMsgp.textContent = "Sending...";
+    responseMsgp.style.color = "#555";
+
+    const formData = new FormData(planForm);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xojporpg", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        responseMsgp.textContent =
+          "Thank you! We will contact you shortly.";
+        responseMsgp.style.color = "green";
+        setTimeout(closeModal, 2000);
+      } else {
+        responseMsgp.textContent =
+          "Something went wrong. Please try again.";
+        responseMsgp.style.color = "red";
+      }
+    } catch (error) {
+      responseMsgp.textContent =
+        "Network error. Please try again.";
+      responseMsgp.style.color = "red";
+    }
+  });
 
   // Contact Form Submission
    const servicesContainer = document.getElementById('servicesContainer');
