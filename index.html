@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Worqly - Cloud Office Solution</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ======================= -->
+  <!-- NAVBAR -->
+  <!-- ======================= -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo">Worqly</div>
+      <nav id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+       <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle Dark Mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+        <a href="#contact" class="btn-primary">Request Demo</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================= -->
+  <!-- HERO SECTION -->
+  <!-- ======================= -->
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Redefining Workspaces with <span>Worqly</span></h1>
+        <p>Empower your organization with a secure, scalable, and intelligent cloud office platform designed for the modern workforce.</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn-primary">Get Started</a>
+          <a href="#features" class="btn-secondary">Explore Features</a>
+        </div>
+        <div class="hero-badges">
+          <span><i class="fas fa-shield-alt"></i> Enterprise Security</span>
+          <span><i class="fas fa-cloud"></i> 99.9% Uptime</span>
+          <span><i class="fas fa-users"></i> Scalable Teams</span>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="C:\Users\dhruv\Desktop\worqly\img\homep.png" alt="Cloud Office" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= -->
+  <!-- STATS SECTION -->
+  <!-- ======================= -->
+  <section class="section stats">
+    <div class="container stats-grid">
+      <div class="stat" data-aos="zoom-in">
+        <h3>500+</h3>
+        <p>Businesses Empowered</p>
+      </div>
+      <div class="stat" data-aos="zoom-in" data-aos-delay="100">
+        <h3>50K+</h3>
+        <p>Active Users</p>
+      </div>
+      <div class="stat" data-aos="zoom-in" data-aos-delay="200">
+        <h3>99.9%</h3>
+        <p>Uptime Guarantee</p>
+      </div>
+      <div class="stat" data-aos="zoom-in" data-aos-delay="300">
+        <h3>40%</h3>
+        <p>Average Cost Reduction</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= -->
+  <!-- ABOUT SECTION -->
+  <!-- ======================= -->
+  <section id="about" class="section">
+    <div class="container about-grid">
+      <div data-aos="fade-left">
+        <h2 class="section-title">What is Worqly?</h2>
+        <p>Worqly is a next-generation cloud office platform that replaces traditional workspaces with a secure and intelligent digital environment. It integrates virtualization, monitoring, analytics, and cybersecurity into a seamless ecosystem.</p>
+        <ul class="check-list">
+          <li><i class="fas fa-check-circle"></i> Fully virtual workspace</li>
+          <li><i class="fas fa-check-circle"></i> Real-time productivity insights</li>
+          <li><i class="fas fa-check-circle"></i> Enterprise-grade security</li>
+          <li><i class="fas fa-check-circle"></i> Scalable infrastructure</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= -->
+  <!-- FEATURES SECTION -->
+  <!-- ======================= -->
+  <section id="features" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Powerful Features</h2>
+      <div class="features-grid">
+        <div class="feature-card" data-aos="zoom-in">
+          <i class="fas fa-desktop feature-icon"></i>
+          <h3>Cloud Workspace</h3>
+          <p>Access your office from anywhere with a secure and personalized digital environment.</p>
+        </div>
+        <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
+          <i class="fas fa-chart-line feature-icon"></i>
+          <h3>Employee Monitoring</h3>
+          <p>Gain real-time insights into productivity and work patterns.</p>
+        </div>
+        <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
+          <i class="fas fa-globe feature-icon"></i>
+          <h3>App & Website Tracking</h3>
+          <p>Understand how employees utilize digital resources during work hours.</p>
+        </div>
+        <div class="feature-card" data-aos="zoom-in" data-aos-delay="300">
+          <i class="fas fa-lock feature-icon"></i>
+          <h3>Restriction & Control</h3>
+          <p>Block distractions and enforce organizational policies effectively.</p>
+        </div>
+        <div class="feature-card" data-aos="zoom-in" data-aos-delay="400">
+          <i class="fas fa-file-alt feature-icon"></i>
+          <h3>Smart Reporting</h3>
+          <p>Generate actionable reports for data-driven decision-making.</p>
+        </div>
+        <div class="feature-card" data-aos="zoom-in" data-aos-delay="500">
+          <i class="fas fa-shield-alt feature-icon"></i>
+          <h3>Advanced Security</h3>
+          <p>Protect sensitive data with enterprise-grade cybersecurity measures.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= -->
+  <!-- HOW IT WORKS -->
+  <!-- ======================= -->
+  <section id="how-it-works" class="section">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">How It Works</h2>
+    <div class="timeline">
+      
+      <div class="timeline-item" data-aos="fade-right">
+        <div class="step-circle">1</div>
+        <div class="timeline-content">
+          <h3>Sign Up</h3>
+          <p>Create your organization and invite employees to join your cloud workspace.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-aos="fade-left">
+        <div class="step-circle">2</div>
+        <div class="timeline-content">
+          <h3>Configure Workspace</h3>
+          <p>Set up roles, permissions, applications, and security policies tailored to your organization.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-aos="fade-right">
+        <div class="step-circle">3</div>
+        <div class="timeline-content">
+          <h3>Monitor & Manage</h3>
+          <p>Track productivity, manage teams, and ensure operational transparency in real time.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item" data-aos="fade-left">
+        <div class="step-circle">4</div>
+        <div class="timeline-content">
+          <h3>Analyze & Optimize</h3>
+          <p>Leverage smart reports and analytics to improve efficiency and make data-driven decisions.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- ======================= -->
+  <!-- PRICING SECTION -->
+  <!-- ======================= -->
+  <section id="pricing" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Flexible Pricing</h2>
+      <div class="pricing-grid">
+        <div class="pricing-card" data-aos="zoom-in">
+          <h3>Starter</h3>
+          <p class="price">₹499<span>/user/month</span></p>
+          <ul>
+            <li>Cloud Workspace</li>
+            <li>Basic Monitoring</li>
+            <li>Daily Reports</li>
+            <li>Email Support</li>
+          </ul>
+          <a href="#contact" class="btn-primary">Choose Plan</a>
+        </div>
+        <div class="pricing-card featured" data-aos="zoom-in" data-aos-delay="100">
+          <h3>Professional</h3>
+          <p class="price">₹999<span>/user/month</span></p>
+          <ul>
+            <li>All Starter Features</li>
+            <li>Advanced Monitoring</li>
+            <li>Website & App Tracking</li>
+            <li>Weekly Reports</li>
+            <li>Priority Support</li>
+          </ul>
+          <a href="#contact" class="btn-primary">Choose Plan</a>
+        </div>
+        <div class="pricing-card" data-aos="zoom-in" data-aos-delay="200">
+          <h3>Enterprise</h3>
+          <p class="price">Custom</p>
+          <ul>
+            <li>All Professional Features</li>
+            <li>Custom Integrations</li>
+            <li>Dedicated Manager</li>
+            <li>24/7 Support</li>
+          </ul>
+          <a href="#contact" class="btn-primary">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= -->
+  <!-- TESTIMONIALS -->
+  <!-- ======================= -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">What Clients Say</h2>
+      <div class="testimonials-slider" data-aos="fade-up">
+        <div class="testimonial active">
+          <p>"Worqly transformed our remote operations and significantly boosted productivity."</p>
+          <h4>- Rahul Sharma, CEO</h4>
+        </div>
+        <div class="testimonial">
+          <p>"The analytics and monitoring features provide unmatched visibility into team performance."</p>
+          <h4>- Anjali Mehta, HR Manager</h4>
+        </div>
+        <div class="testimonial">
+          <p>"A secure and scalable solution perfect for modern businesses."</p>
+          <h4>- Vikram Singh, IT Director</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= -->
+  <!-- FAQ SECTION -->
+  <!-- ======================= -->
+  <section id="faq" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Frequently Asked Questions</h2>
+      <div class="faq">
+        <div class="faq-item">
+          <button class="faq-question">Is Worqly suitable for small businesses?</button>
+          <div class="faq-answer">Yes, Worqly is scalable and ideal for businesses of all sizes.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How secure is the platform?</button>
+          <div class="faq-answer">Worqly uses enterprise-grade encryption and role-based access control.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Do you offer a free trial?</button>
+          <div class="faq-answer">Yes, you can request a free demo through our contact form.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= -->
+  <!-- CTA SECTION -->
+  <!-- ======================= -->
+  <section class="section cta">
+    <div class="container" data-aos="zoom-in">
+      <h2>Ready to Transform Your Workplace?</h2>
+      <p>Join hundreds of organizations already leveraging Worqly.</p>
+      <a href="#contact" class="btn-primary">Schedule a Demo</a>
+    </div>
+  </section>
+
+  <!-- ======================= -->
+  <!-- CONTACT SECTION -->
+  <!-- ======================= -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Request a Demo</h2>
+      <form id="contactForm" data-aos="fade-up">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="text" name="company" placeholder="Company Name" required />
+        <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+        <button type="submit" class="btn-primary">Submit</button>
+        <p id="formResponse" class="form-response"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ======================= -->
+  <!-- FOOTER -->
+  <!-- ======================= -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Worqly</h3>
+        <p>Work Smart. Work Secure. Work Anywhere.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="admin.html">Admin</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Email: info@worqly.com</p>
+        <p>Phone: +91 00000 00000</p>
+      </div>
+    </div>
+    <p class="copyright">© 2026 Worqly. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
