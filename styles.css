@@ -493,8 +493,13 @@ body.dark .timeline::before {
   display: none;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: 9999;
   padding: 20px;
+}
+
+/* Prevent background scrolling */
+body.modal-open {
+  overflow: hidden;
 }
 
 /* Show Modal */
@@ -526,6 +531,7 @@ body.dark .timeline::before {
   background: none;
   color: var(--text);
   cursor: pointer;
+  touch-action: manipulation;
 }
 
 /* Input Field */
@@ -537,6 +543,7 @@ body.dark .timeline::before {
   border: 1px solid var(--border);
   background: var(--bg);
   color: var(--text);
+  font-size: 16px;
 }
 
 /* Animation */
@@ -549,6 +556,20 @@ body.dark .timeline::before {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Ensure buttons are touch-friendly */
+.choose-plan-btn,
+.modal-close,
+.modal-content button {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+/* Prevent pseudo-elements from blocking clicks */
+section::before,
+section::after {
+  pointer-events: none;
 }
 
 /* Dark Mode Compatibility */
@@ -654,5 +675,10 @@ form input, form textarea {
 
   .service-item {
     padding: 15px;
+  }
+
+  .modal-content {
+    padding: 20px;
+    border-radius: 12px;
   }
 }

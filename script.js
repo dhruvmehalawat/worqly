@@ -62,22 +62,45 @@ document.addEventListener('DOMContentLoaded', () => {
   const planForm = document.getElementById("planForm");
   const responseMsgp = document.getElementById("planFormResponse");
 
-  // Open modal when clicking "Choose Plan"
-  document.querySelectorAll(".choose-plan-btn").forEach((button) => {
-    button.addEventListener("click", () => {
-      const plan = button.getAttribute("data-plan");
-      selectedPlanText.textContent = plan;
-      planInput.value = plan;
-      modal.classList.add("show");
-    });
-  });
+  // Function to open modal
+  function openModal(plan) {
+    selectedPlanText.textContent = plan;
+    planInput.value = plan;
+    modal.classList.add("show");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+  }
 
-  // Close modal
+  // Function to close modal
   function closeModal() {
     modal.classList.remove("show");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
     planForm.reset();
-    responseMsgp.textContent = "";
+    responseMsg.textContent = "";
   }
+
+  // Event delegation for buttons (works for mobile & dynamic content)
+  document.addEventListener("click", (e) => {
+    const button = e.target.closest(".choose-plan-btn");
+    if (button) {
+      e.preventDefault();
+      openModal(button.dataset.plan);
+    }
+  });
+
+  // Touch support for mobile devices
+  document.addEventListener(
+    "touchstart",
+    (e) => {
+      const button = e.target.closest(".choose-plan-btn");
+      if (button) {
+        e.preventDefault();
+        openModal(button.dataset.plan);
+      }
+    },
+    { passive: false }
+  );
 
   closeModalBtn.addEventListener("click", closeModal);
 
