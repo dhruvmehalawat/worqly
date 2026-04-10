@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const addServiceBtn = document.getElementById('addServiceBtn');
   const form = document.getElementById('contactForm');
   const responseMsg = document.getElementById('formResponse');
+  const servicesField = document.getElementById("servicesField");
 
   if (!servicesContainer || !addServiceBtn) return;
 
@@ -130,6 +131,10 @@ document.addEventListener('DOMContentLoaded', () => {
  addServiceBtn.addEventListener('click', handleAddService);
   addServiceBtn.addEventListener('touchstart', handleAddService, { passive: false });
 
+  // Handle form submission to Formspree
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
   // Handle form submission
   if (form) {
     form.addEventListener('submit', async (e) => {
@@ -164,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
       responseMsg.style.color = "#555";
 
       try {
-        const res = await fetch('/api/contact', {
+        const res = await fetch("https://formspree.io/f/xojporpg", {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(formData),
