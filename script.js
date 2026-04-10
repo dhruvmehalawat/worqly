@@ -120,6 +120,9 @@ document.addEventListener('DOMContentLoaded', () => {
   
   createServiceItem();
 
+  // Add service on button click
+  addServiceBtn.addEventListener("click", createServiceItem);
+
    // Handle both click and touch events for mobile
 
   const handleAddService = (e) => {
@@ -130,11 +133,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Add new service on button click
  addServiceBtn.addEventListener('click', handleAddService);
   addServiceBtn.addEventListener('touchstart', handleAddService, { passive: false });
-
-  // Handle form submission to Formspree
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault();
-
   // Handle form submission
   if (form) {
     form.addEventListener('submit', async (e) => {
@@ -164,6 +162,9 @@ document.addEventListener('DOMContentLoaded', () => {
           });
         }
       });
+
+       // Store services as JSON string
+      servicesField.value = JSON.stringify(formData.services, null, 2);
 
       responseMsg.textContent = "Submitting...";
       responseMsg.style.color = "#555";
